@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function capitalize(str) {
+            var firstLetter = str.slice(0, 1);
+            return firstLetter.toUpperCase() + str.substring(1);
+            }
+
+            function isCapitalize(str) {
+            return str.charAt(0) == str.charAt(0).toUpperCase();
+            }
+
+            function reverseWords(text) {
+            text = text.split(" ");
+
+            text = text.map((word) => {
+                reverse = word.split("").reverse().join("").toLowerCase();
+
+                if (isCapitalize(word)) {
+                return capitalize(reverse);
+                } else {
+                return reverse;
+                }
+            });
+
+            return text.join(" ");
+            }
+
+            console.log(reverseWords("I am A Great human"));
+    </script>
+</body>
+</html>

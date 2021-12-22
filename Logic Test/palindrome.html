@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindrome(text) {
+            text = text.toLowerCase();
+            var reverse = text.split("").reverse().join("");
+            return text == reverse;
+          }
+          
+          console.log(palindrome("Radar"));
+          console.log(palindrome("Malam"));
+          console.log(palindrome("Kasur ini rusak"));
+          console.log(palindrome("Ibu Ratna antar ubi"));
+          console.log(palindrome("Malas"));
+          console.log(palindrome("Makan nasi goreng"));
+          console.log(palindrome("Balonku ada lima"));
+        </script>
+</body>
+</html>
